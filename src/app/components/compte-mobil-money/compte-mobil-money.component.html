@@ -1,3 +1,5 @@
+
+
 <script>var defaultThemeMode = "light"; var themeMode; if (document.documentElement) { if (document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if (localStorage.getItem("data-bs-theme") !== null) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
 <!--end::Theme mode setup on page load-->
 <!--begin::Root-->
@@ -59,7 +61,7 @@
 								<div class="selected-option">
 						
 									<div>
-										<iconify-icon icon="flag:tg-4x3"></iconify-icon>
+										<img src="dist/assets/media/flags/togo.svg" alt="">
 										<Strong>+228</Strong>
 									</div>
 						
@@ -72,7 +74,7 @@
 									</ol>
 								</div>
 							</div>
-							<iconify-icon icon="mdi:home"></iconify-icon>
+							
 						
 							
 						</div>
@@ -131,7 +133,7 @@
 		<!--end::Body-->
 	</div>
 	<!--end::Authentication - Sign-in-->
+	<script src="dist/assets/script.js"></script>
 </div>
 <!--end::Root-->
 <!--begin::Javascript-->
-<script src="script.js"></script>
