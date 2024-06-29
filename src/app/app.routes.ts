@@ -6,6 +6,8 @@ import { ResetPasswordComponent } from './components/sign-in/reset-password/rese
 import { RegistrationComponent } from './components/sign-up/registration/registration.component';
 import { FrontendComponent } from './frontend/frontend.component';
 import { CompteMobilMoneyComponent } from './components/compte-mobil-money/compte-mobil-money.component';
+import { UserProfileComponent } from './components/Account/user-profile/user-profile.component';
+import { UserSettingsComponent } from './components/Account/user-settings/user-settings.component';
 
 
 export const routes: Routes = [
@@ -17,5 +19,9 @@ export const routes: Routes = [
     { path: 'reset-password', component: ResetPasswordComponent },
     { path: 'registration', component: RegistrationComponent },
     { path: 'front', component: FrontendComponent },
-    { path: 'add-mobile-money', component: CompteMobilMoneyComponent}
+    { path: 'add-mobile-money', component: CompteMobilMoneyComponent},
+    { path: 'user-profile', component: UserProfileComponent },
+    { path: 'user-settings', component: UserSettingsComponent },
+    
+
 ];

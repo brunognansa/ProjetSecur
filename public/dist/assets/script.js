@@ -269,7 +269,6 @@ for (country of countries) {
         </div>
         <strong>+${country.phone}</strong>
     </li> `;
-    console.log(country.code.toLowerCase());
 
     select_box.querySelector('ol').insertAdjacentHTML('beforeend', option);
     options = document.querySelectorAll('.option');

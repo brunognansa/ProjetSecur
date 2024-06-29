@@ -7,13 +7,13 @@ import { UtilisateurServiceService } from '../../../service/user/utilisateur-ser
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-side-bar',
+  selector: 'app-user-profile',
   standalone: true,
-  imports: [FormsModule,RouterModule],
-  templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.css'
+  imports: [RouterModule,FormsModule],
+  templateUrl: './user-profile.component.html',
+  styleUrl: './user-profile.component.css'
 })
-export class SideBarComponent {
+export class UserProfileComponent {
   user: Utilisateur;
 
   constructor( private userService: UtilisateurServiceService, private router:Router){
