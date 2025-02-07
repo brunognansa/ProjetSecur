@@ -16,17 +16,17 @@ var KTModalCustomersAdd = function () {
 			form,
 			{
 				fields: {
-                    'name': {
+                    'telephone': {
 						validators: {
 							notEmpty: {
-								message: 'Customer name is required'
+								message: 'Le numero de telephone du compte est requis'
 							}
 						}
 					},
-                    'email': {
+                    'password': {
 						validators: {
 							notEmpty: {
-								message: 'Customer email is required'
+								message: 'Mot de passe du compte est requis'
 							}
 						}
 					},
@@ -47,7 +47,7 @@ var KTModalCustomersAdd = function () {
 					'country': {
 						validators: {
 							notEmpty: {
-								message: 'Country is required'
+								message: 'Le pays est necessaire'
 							}
 						}
 					},
@@ -99,7 +99,7 @@ var KTModalCustomersAdd = function () {
 
 		// Action buttons
 		submitButton.addEventListener('click', function (e) {
-			e.preventDefault();
+			//e.preventDefault();
 
 			// Validate form before submit
 			if (validator) {

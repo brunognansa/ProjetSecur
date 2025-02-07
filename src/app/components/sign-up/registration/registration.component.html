@@ -11,24 +11,26 @@
             <div class="d-flex flex-column position-xl-fixed top-0 bottom-0 w-xl-600px scroll-y">
                 <!--begin::Header-->
                 <div class="d-flex flex-row-fluid flex-column text-center p-5 p-lg-10 pt-lg-20">
-                    <!--begin::Logo-->
-                    <a href="../dist/index.html" class="py-2 py-lg-20">
-                        <img alt="Logo" src="dist/assets/media/logos/mail.svg" class="h-40px h-lg-50px" />
-                    </a>
-                    <!--end::Logo-->
-                    <!--begin::Title-->
-                    <h1 class="d-none d-lg-block fw-bold text-white fs-2qx pb-5 pb-md-10">Welcome to Saul HTML Free</h1>
-                    <!--end::Title-->
-                    <!--begin::Description-->
-                    <p class="d-none d-lg-block fw-semibold fs-2 text-white">Plan your blog post by choosing a topic creating
-                    <br />an outline and checking facts</p>
-                    <!--end::Description-->
-                </div>
-                <!--end::Header-->
-                <!--begin::Illustration-->
-                <div class="d-none d-lg-block d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-100px min-h-lg-350px" style="background-image: url(dist/assets/media/illustrations/sketchy-1/17.png)"></div>
-                <!--end::Illustration-->
-            </div>
+					<!--begin::Logo-->
+					<a href="../dist/index.html" class="py-2 py-lg-20">
+						<img alt="Logo" src="dist/assets/media/logos/mail.svg" class="h-40px h-lg-50px" />
+					</a>
+					<!--end::Logo-->
+					<!--begin::Title-->
+					<h1 class="d-none d-lg-block fw-bold text-white fs-2qx pb-5 pb-md-10">Bienvenue sur MONEY BRIDGE</h1>
+					<!--end::Title-->
+					<!--begin::Description-->
+					<p class="d-none d-lg-block fw-semibold fs-2 text-white">Faite vos transaction en securité et profité des transfert 
+						<br /> d'argent illimité sur tous vos compte
+					</p>
+					<!--end::Description-->
+				</div>
+				<!--end::Header-->
+				<!--begin::Illustration-->
+				<div class="d-none d-lg-block d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-100px min-h-lg-350px"
+					style="background-image: url(dist/assets/media/illustrations/sketchy-1/17.png)"></div>
+				<!--end::Illustration-->
+			</div>
             <!--end::Wrapper-->
         </div>
         <!--begin::Aside-->
@@ -43,17 +45,17 @@
                         <!--begin::Heading-->
                         <div class="mb-10 text-center">
                             <!--begin::Title-->
-                            <h1 class="text-dark mb-3">Create an Account</h1>
+                            <h1 class="text-dark mb-3">Creer un compte</h1>
                             <!--end::Title-->
                             <!--begin::Link-->
-                            <div class="text-gray-400 fw-semibold fs-4">Already have an account?
-                            <a href="../dist/authentication/sign-in/basic.html" class="link-primary fw-bold">Sign in here</a></div>
+                            <div class="text-gray-400 fw-semibold fs-4">vous avez deja un compte?
+                            <a href="../dist/authentication/sign-in/basic.html" class="link-primary fw-bold">Connecter vous ici</a></div>
                             <!--end::Link-->
                         </div>
                         <!--end::Heading-->
                         <!--begin::Action-->
                         <button type="button" class="btn btn-light-primary fw-bold w-100 mb-10">
-                        <img alt="Logo" src="dist/assets/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Sign in with Google</button>
+                        <img alt="Logo" src="dist/assets/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Se connecter avec Google</button>
                         <!--end::Action-->
                         <!--begin::Separator-->
                         <div class="d-flex align-items-center mb-10">
@@ -66,13 +68,13 @@
                         <div class="row fv-row mb-7">
                             <!--begin::Col-->
                             <div class="col-xl-6">
-                                <label class="form-label fw-bold text-dark fs-6">First Name</label>
+                                <label class="form-label fw-bold text-dark fs-6">Nom</label>
                                 <input class="form-control form-control-lg form-control-solid" [(ngModel)]="user.nom" type="text" placeholder="" name="nom" autocomplete="off" />
                             </div>
                             <!--end::Col-->
                             <!--begin::Col-->
                             <div class="col-xl-6">
-                                <label class="form-label fw-bold text-dark fs-6">Last Name</label>
+                                <label class="form-label fw-bold text-dark fs-6">Prenom</label>
                                 <input class="form-control form-control-lg form-control-solid" type="text" [(ngModel)]="user.prenom" placeholder="" name="prenom" autocomplete="off" />
                             </div>
                             <!--end::Col-->
@@ -89,7 +91,7 @@
                             <!--begin::Wrapper-->
                             <div class="mb-1">
                                 <!--begin::Label-->
-                                <label class="form-label fw-bold text-dark fs-6">Password</label>
+                                <label class="form-label fw-bold text-dark fs-6">Mot de passe</label>
                                 <!--end::Label-->
                                 <!--begin::Input wrapper-->
                                 <div class="position-relative mb-3">
@@ -111,13 +113,13 @@
                             </div>
                             <!--end::Wrapper-->
                             <!--begin::Hint-->
-                            <div class="text-muted">Use 8 or more characters with a mix of letters, numbers & symbols.</div>
+                            <div class="text-muted">Utilisé au moin 8 caractére contenant un melange de chiffre, de nombre et de symbole</div>
                             <!--end::Hint-->
                         </div>
                         <!--end::Input group=-->
                         <!--begin::Input group-->
                         <div class="fv-row mb-5">
-                            <label class="form-label fw-bold text-dark fs-6">Confirm Password</label>
+                            <label class="form-label fw-bold text-dark fs-6">Confirme Mot de passe</label>
                             <input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="confirm-password" autocomplete="off" />
                         </div>
                         <!--end::Input group-->
@@ -126,15 +128,16 @@
                             <label class="form-check form-check-custom form-check-solid form-check-inline">
                                 <input class="form-check-input" type="checkbox" name="toc" value="1" />
                                 <span class="form-check-label fw-semibold text-gray-700 fs-6">I Agree
-                                <a href="#" class="ms-1 link-primary">Terms and conditions</a>.</span>
+                                <a href="#" class="ms-1 link-primary">Terms et conditions</a>.</span>
                             </label>
                         </div>
                         <!--end::Input group-->
                         <!--begin::Actions-->
+                        <button type="submit" name="butt" id="butt" style="display: none;">butt</button>
                         <div class="text-center">
                             <button type="submit" id="kt_sign_up_submit" class="btn btn-lg btn-primary">
-                                <span class="indicator-label">Submit</span>
-                                <span class="indicator-progress">Please wait...
+                                <span class="indicator-label">Enregistré</span>
+                                <span class="indicator-progress">Veuillez patientez...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>

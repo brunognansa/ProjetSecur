@@ -11,9 +11,9 @@
       </div>
       <!--end::Sidebar mobile toggle-->
       <!--begin::Logo-->
-      <a href="../dist/index.html" class="app-sidebar-logo">
-        <img alt="Logo" src="dist/assets/media/logos/default.svg" class="h-30px theme-light-show" />
-        <img alt="Logo" src="dist/assets/media/logos/default-dark.svg" class="h-30px theme-dark-show" />
+      <a [routerLink]="['/admin']" class="app-sidebar-logo">
+        <img alt="Logo" src="dist/assets/media/logos/default.svg" class="h-55px theme-light-show" />
+        <img alt="Logo" src="dist/assets/media/logos/default-dark.svg" class="h-55px theme-dark-show" />
       </a>
       <!--end::Logo-->
       <!--begin::Sidebar toggle-->
@@ -1335,13 +1335,13 @@
           <!--end::Menu separator-->
           <!--begin::Menu item-->
           <div class="menu-item px-5">
-            <a [routerLink]="['/user-profile']" class="menu-link px-5">My Profile</a>
+            <a [routerLink]="['/user-profile']" class="menu-link px-5">Mon Profile</a>
           </div>
           <!--end::Menu item-->
           <!--begin::Menu item-->
           <div class="menu-item px-5">
-            <a href="../dist/apps/projects/list.html" class="menu-link px-5">
-              <span class="menu-text">My Projects</span>
+            <a [routerLink]="['/list-transaction']" class="menu-link px-5">
+              <span class="menu-text">Mes Transaction</span>
               <span class="menu-badge">
                 <span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
               </span>

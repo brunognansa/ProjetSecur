@@ -17,64 +17,59 @@ var KTAccountSettingsProfileDetails = function () {
                     fname: {
                         validators: {
                             notEmpty: {
-                                message: 'First name is required'
+                                message: 'Veuillez choisir votre nom'
                             }
                         }
                     },
                     lname: {
                         validators: {
                             notEmpty: {
-                                message: 'Last name is required'
+                                message: 'Veuillez saisir votre prenom'
                             }
                         }
                     },
-                    company: {
+                    adresse: {
                         validators: {
                             notEmpty: {
-                                message: 'Company name is required'
+                                message: 'Veuillez saisir votre adresse'
                             }
                         }
                     },
                     phone: {
                         validators: {
                             notEmpty: {
-                                message: 'Contact phone number is required'
+                                message: 'Veuillez entrée votre numero de telephone'
                             }
                         }
                     },
                     country: {
                         validators: {
                             notEmpty: {
-                                message: 'Please select a country'
+                                message: 'Veuillez choisir votre pays'
                             }
                         }
                     },
-                    timezone: {
+                    
+                    email: {
                         validators: {
                             notEmpty: {
-                                message: 'Please select a timezone'
+                                message: 'Veuillez saisir votre email'
                             }
                         }
                     },
                     'communication[]': {
                         validators: {
                             notEmpty: {
-                                message: 'Please select at least one communication method'
+                                message: 'Veuillez choisir votre moyen de communication principale'
                             }
                         }
                     },
-                    language: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Please select a language'
-                            }
-                        }
-                    },
+                    
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),
                     submitButton: new FormValidation.plugins.SubmitButton(),
-                    //defaultSubmit: new FormValidation.plugins.DefaultSubmit(), // Uncomment this line to enable normal button submit after form validation
+                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(), // Uncomment this line to enable normal button submit after form validation
                     bootstrap: new FormValidation.plugins.Bootstrap5({
                         rowSelector: '.fv-row',
                         eleInvalidClass: '',

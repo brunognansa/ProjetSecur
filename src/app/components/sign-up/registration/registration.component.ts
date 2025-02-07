@@ -28,7 +28,7 @@ export class RegistrationComponent {
         console.log('Enregistrement réussi ! Redirection vers la page de connexion...');
         if (this.user.error?.startsWith("Success")){
 
-          this.router.navigate(['/login']); 
+          
 
         }
         

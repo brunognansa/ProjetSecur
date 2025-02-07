@@ -15,17 +15,17 @@ var KTSignupGeneral = function () {
             form,
             {
                 fields: {
-                    'first-name': {
+                    'nom': {
                         validators: {
                             notEmpty: {
-                                message: 'First Name is required'
+                                message: 'Le nom est requis'
                             }
                         }
                     },
-                    'last-name': {
+                    'prenom': {
                         validators: {
                             notEmpty: {
-                                message: 'Last Name is required'
+                                message: 'Le prenom est requis'
                             }
                         }
                     },
@@ -33,20 +33,20 @@ var KTSignupGeneral = function () {
                         validators: {
                             regexp: {
                                 regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                message: 'The value is not a valid email address',
+                                message: 'Votre email n\'est pas valide',
                             },
                             notEmpty: {
-                                message: 'Email address is required'
+                                message: 'L\'email ne peut étre vide'
                             }
                         }
                     },
                     'password': {
                         validators: {
                             notEmpty: {
-                                message: 'The password is required'
+                                message: 'Le mot de passe ne peut étre vide'
                             },
                             callback: {
-                                message: 'Please enter valid password',
+                                message: 'Entrée un mot de passe valide',
                                 callback: function (input) {
                                     if (input.value.length > 0) {
                                         return validatePassword();
@@ -58,20 +58,20 @@ var KTSignupGeneral = function () {
                     'confirm-password': {
                         validators: {
                             notEmpty: {
-                                message: 'The password confirmation is required'
+                                message: 'Confirmé votre mot de passe'
                             },
                             identical: {
                                 compare: function () {
                                     return form.querySelector('[name="password"]').value;
                                 },
-                                message: 'The password and its confirm are not the same'
+                                message: 'Les deux mot de passe doive étre identique'
                             }
                         }
                     },
                     'toc': {
                         validators: {
                             notEmpty: {
-                                message: 'You must accept the terms and conditions'
+                                message: 'Vous devez accepté les therme du contrat'
                             }
                         }
                     }
@@ -93,7 +93,7 @@ var KTSignupGeneral = function () {
 
         // Handle form submit
         submitButton.addEventListener('click', function (e) {
-            e.preventDefault();
+            //e.preventDefault();
 
             validator.revalidateField('password');
 
@@ -124,6 +124,9 @@ var KTSignupGeneral = function () {
                             }
                         }).then(function (result) {
                             if (result.isConfirmed) {
+                                var submitbut = document.querySelector('#butt');
+                                
+                                submitbut.click();
                                 form.reset();  // reset form
                                 passwordMeter.reset();  // reset password meter
                                 //form.submit();
@@ -131,7 +134,10 @@ var KTSignupGeneral = function () {
                                 //form.submit(); // submit form
                                 var redirectUrl = form.getAttribute('data-kt-redirect-url');
                                 if (redirectUrl) {
-                                    location.href = redirectUrl;
+                                    setTimeout(function () {
+                                        location.href = redirectUrl;
+                                    }, 1000);
+
                                 }
                             }
                         });
@@ -240,6 +246,7 @@ var KTSignupGeneral = function () {
         submitButton.addEventListener('click', function (e) {
             e.preventDefault();
 
+
             validator.revalidateField('password');
 
             validator.validate().then(function (status) {
@@ -256,12 +263,17 @@ var KTSignupGeneral = function () {
                         if (response) {
                             form.reset();
 
+                            form.submit();
                             const redirectUrl = form.getAttribute('data-kt-redirect-url');
-
                             if (redirectUrl) {
+                                alert("yes");
+                                form.submit();
                                 location.href = redirectUrl;
                             }
+
+
                         } else {
+
                             // Show error popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                             Swal.fire({
                                 text: "Sorry, looks like there are some errors detected, please try again.",
@@ -304,6 +316,7 @@ var KTSignupGeneral = function () {
                     });
                 }
             });
+
         });
 
         // Handle password input
@@ -320,7 +333,7 @@ var KTSignupGeneral = function () {
         return (passwordMeter.getScore() > 50);
     }
 
-    var isValidUrl = function(url) {
+    var isValidUrl = function (url) {
         try {
             new URL(url);
             return true;

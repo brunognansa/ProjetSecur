@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   user: Utilisateur= new Utilisateur();
+  user2:string | undefined ="";
 
   constructor( private userService: UtilisateurServiceService, private router:Router){}
 
@@ -22,12 +23,10 @@ export class LoginComponent {
     this.userService.login(this.user).subscribe(
       result=>{
         this.user=result
-        console.log(this.user);
+        this.user2=this.user.nom;
+       
         if (this.user.error?.startsWith("Success")){
           localStorage.setItem("user",JSON.stringify( this.user))
-
-          this.router.navigate(['/admin']); 
-
         }
       // Redirige vers la page de connexion après l'enregistrement
       },
